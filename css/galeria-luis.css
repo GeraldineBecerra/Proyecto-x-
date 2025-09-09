@@ -1,0 +1,79 @@
+
+/* tu CSS de galería aquí */
+
+/* ====== GALERÍA (Luis) ====== */
+#galeria{
+  padding: 28px 16px;
+  text-align: center;
+}
+
+#galeria .galeria-title{
+  color:#FFD700;
+  font-size: 1.8rem;
+  margin: 0 0 16px;
+}
+
+/* contenedor ancho del sitio (evita que se estreche al centro) */
+#galeria .galeria-container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === GRID lado a lado === */
+#galeria .parent{
+  display: grid !important;                             /* forzar grid */
+  grid-template-columns: repeat(3, minmax(260px, 1fr)); /* 3 columnas desktop */
+  gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* tarjeta con proporción de carta */
+#galeria .parent > div{
+  width: 100%;
+  aspect-ratio: 3 / 4;          /* proporción de carta */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0,0,0,.35);
+}
+
+/* imagen llenando la tarjeta (sin espacios ni fondo) */
+#galeria .parent img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;            /* elimina espacios sobrantes */
+  object-position: center;
+  border-radius: 12px;
+  transition: transform .25s ease, filter .25s ease;
+}
+
+/* hover suave */
+#galeria .parent img:hover{
+  transform: scale(1.05);
+  filter: brightness(1.06);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 992px){
+  #galeria .parent{
+    grid-template-columns: repeat(2, minmax(240px, 1fr)); /* 2 columnas tablet */
+  }
+}
+@media (max-width: 640px){
+  #galeria .parent{
+    grid-template-columns: 1fr;                           /* 1 columna móvil */
+  }
+}
+
+/* ===== Cortes de estilos globales que podrían interferir ===== */
+/* Si el sitio tiene reglas globales que pisaban tu grid, las anulamos aquí */
+#galeria .parent,
+#galeria .parent > div,
+#galeria .parent img{
+  float: none !important;
+  position: static !important;
+  max-width: none !important;
+}
