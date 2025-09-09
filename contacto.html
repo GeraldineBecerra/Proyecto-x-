@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Comarca</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>POKEMON</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#acerca">Acerca de</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="subtitle">
+                    <h2>¿Trabajamos juntos?</h2>
+                    <p>Si tienes un proyecto en mente o quieres colaborar, no dudes en contactarme. Respondo en menos de 24 horas.</p>
+                </div>
+                <div class="contact-content">
+
+
+
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="pepito">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="emailBody" name="emailBody" required placeholder="prueba@gmail.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Telefono</label>
+                            <input type="text" id="telefono" name="telefono" required placeholder="+569 12345678">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" required placeholder="asunto..">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required> </textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <p><i class="fa-solid fa-envelope" style="color: #ffcc01;"></i><strong> Email:</strong> pokemon@email.com</p>
+                    </div>
+                    <div class="contact-item">
+
+                        <p><i class="fa-solid fa-phone" style="color: #ffcc01;"></i><strong> Teléfono:</strong> +569 1234 5678 </p>
+                    </div>
+                    <div class="contact-item">
+                        <p><i class="fa-solid fa-location-dot" style="color: #ffcc01;"></i><strong> Ubicación:</strong>Santiago, Chile</p>
+
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d106366.40128309396!2d-70.6871296!3d-33.5806464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1757213290182!5m2!1ses!2scl" width="1200" height="500" style="border:0;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Mi Portafolio</h3>
+                    <p>Desarrollador web especializado en crear experiencias digitales únicas.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#acerca">Acerca de</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Portafolio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript del formulario de contacto -->
+    <script src="js/script.js"></script>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+</body>
+
+</html>
