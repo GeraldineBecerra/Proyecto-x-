@@ -1,141 +1,189 @@
-
 :root {
-    --color-primary: #0d6efd;   
+    --color-primary: #0d6efd;
     --color-blue: #007bff;
     --color-orange: #ee6b2f;
     --color-white: white;
     --color-yellow: #FFCB05;
-    --color-grey: #919191;
+    --color-grey: #919191;
 }
 
-.lucario{
-  background-image: url('ruta/a/tu/imagen.jpg'); /* La ruta de tu imagen */
-  height: 50%; /* O la altura que necesites */
-  width: 100%; /* Para que cubra toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita la repetición de la imagen */
-  background-size: cover; /* La imagen se ajustará para cubrir el contenedor */
+.lucario {
+    background-image: url('ruta/a/tu/imagen.jpg');
+    /* La ruta de tu imagen */
+    height: 50%;
+    /* O la altura que necesites */
+    width: 100%;
+    /* Para que cubra toda la pantalla */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    background-size: cover;
+    /* La imagen se ajustará para cubrir el contenedor */
 }
-
 
 .hero {
-    color: var(--color-grey);     /* Texto gris */
-    min-height: 100vh;            /* Ocupa toda la altura de la pantalla */
-    display: flex;                /* Activa Flexbox para organizar contenido */
-    align-items: center;          /* Centra verticalmente */
-    justify-content: flex-start;  /* Alinea al inicio horizontalmente */
-    text-align: center;           /* Centra el texto dentro de los hijos */
-    flex-direction: column;       /* Apila los elementos en columna */
-    
+    color: var(--color-grey);
+    /* Texto gris */
+    min-height: 100vh;
+    /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    /* Activa Flexbox para organizar contenido */
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: flex-start;
+    /* Alinea al inicio horizontalmente */
+    text-align: center;
+    /* Centra el texto dentro de los hijos */
+    flex-direction: column;
+    /* Apila los elementos en columna */
 }
 
 .hero-container {
-    max-width: 1200px; /* Limita el ancho máximo */
-    width: 100%;       /* Ocupa todo el ancho disponible */
+    max-width: 1200px;
+    /* Limita el ancho máximo */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
 }
 
-.card1{
-    transition: transform 0.3s, border 0.1s; /* Animaciones suaves al interactuar */
+.card1 {
+    transition: transform 0.3s, border 0.1s;
+    /* Animaciones suaves al interactuar */
 }
 
-.card1:hover{
-    transform: translateY(-10px);        /* Eleva la tarjeta al pasar el mouse */
-    cursor: pointer;                     /* Cambia el cursor a mano */
+.card1:hover {
+    transform: translateY(-10px);
+    /* Eleva la tarjeta al pasar el mouse */
+    cursor: pointer;
+    /* Cambia el cursor a mano */
 }
 
 .hero-title {
     font-family: "Orbitron", sans-serif;
     text-align: center;
     padding: 20px;
-    color: var(--color-yellow); /* color de relleno */
-    -webkit-text-stroke: 2px var(--color-grey); /* borde azul */
+    color: var(--color-yellow);
+    /* color de relleno */
+    -webkit-text-stroke: 2px var(--color-grey);
+    /* borde azul */
     font-weight: bold;
-    font-size: 60px;
-
+    font-size: 60px;
 }
-
 
 .hero-subtitle {
-    color: var(--color-grey);
-    font-size: 1.3rem;       /* Tamaño medio */
-    margin-bottom: 50px;     /* Espacio debajo del subtítulo */
-    opacity: 0.9;            /* Ligera transparencia */
-    max-width: 600px;        /* Limita el ancho para mejor lectura */
-    margin-left: auto;       /* Centrado horizontal */
-    margin-right: auto;      /* Centrado horizontal */
+    color: var(--color-white);
+    font-size: 1.3rem;
+    /* Tamaño medio */
+    margin-bottom: 50px;
+    /* Espacio debajo del subtítulo */
+    opacity: 0.9;
+    /* Ligera transparencia */
+    max-width: 600px;
+    /* Limita el ancho para mejor lectura */
+    margin-left: auto;
+    /* Centrado horizontal */
+    margin-right: auto;
+    /* Centrado horizontal */
 }
-
 
 .cards-container {
-    display: grid; /* Usa Grid para organizar las tarjetas */
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Columnas flexibles según espacio */
-    gap: 20px; /* Espacio entre tarjetas */
-    margin-top: 20px; /* Separación desde el contenido superior */
+    display: grid;
+    /* Usa Grid para organizar las tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    /* Columnas flexibles según espacio */
+    gap: 20px;
+    /* Espacio entre tarjetas */
+    margin-top: 20px;
+    /* Separación desde el contenido superior */
 }
-
 
 .card {
-    position: relative; /* Necesario para posicionar elementos internos como el texto superpuesto */
-    background: var(--color-grey); /* Fondo azul gris */
-    border-radius: 10px;          /* Bordes redondeados */
-    border: 1px solid var(--color-white); /* Borde blanco */
-    overflow: hidden;             /* Oculta contenido que se salga del contenedor */
-    transition: transform 0.3s, border 0.1s; /* Animaciones suaves al interactuar */
-    height: 530px;                /* Altura fija para uniformidad */
+    position: relative;
+    /* Necesario para posicionar elementos internos como el texto superpuesto */
+    background: var(--color-grey);
+    /* Fondo azul gris */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    border: 1px solid var(--color-white);
+    /* Borde blanco */
+    overflow: hidden;
+    /* Oculta contenido que se salga del contenedor */
+    transition: transform 0.3s, border 0.1s;
+    /* Animaciones suaves al interactuar */
+    height: 530px;
+    /* Altura fija para uniformidad */
 }
-
 
 .card:hover {
-    border: 1px solid var(--color-white); /* Mantiene el borde blanco */
-    transform: translateY(-10px);        /* Eleva la tarjeta al pasar el mouse */
-    cursor: pointer;                     /* Cambia el cursor a mano */
+    border: 1px solid var(--color-white);
+    /* Mantiene el borde blanco */
+    transform: translateY(-10px);
+    /* Eleva la tarjeta al pasar el mouse */
+    cursor: pointer;
+    /* Cambia el cursor a mano */
 }
-
 
 .card img {
-    width: 100%;   /* Ocupa todo el ancho disponible */
-    height: auto;  /* Mantiene proporción original */
-    display: block;/* Elimina espacios extra debajo de la imagen */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    height: auto;
+    /* Mantiene proporción original */
+    display: block;
+    /* Elimina espacios extra debajo de la imagen */
 }
-
 
 .card img:hover {
-    opacity: 0.8; /* Imagen ligeramente transparente al pasar el mouse */
+    opacity: 0.8;
+    /* Imagen ligeramente transparente al pasar el mouse */
 }
-
 
 .card-body {
-    padding: 15px; /* Espaciado interno */
+    padding: 15px;
+    /* Espaciado interno */
 }
-
 
 .card-body h2 {
-    color: var(--color-yellow); /* Azul oscuro para destacar */
-    font-size: 1.5rem;       /* Tamaño medio */
-    margin-bottom: 10px;     /* Espacio debajo del título */
+    color: var(--color-yellow);
+    /* Azul oscuro para destacar */
+    font-size: 1.5rem;
+    /* Tamaño medio */
+    margin-bottom: 10px;
+    /* Espacio debajo del título */
 }
-
 
 .card-p i {
-    color: var(--color-primary); /* Ícono en azul oscuro */
-    margin-right: 8px;       /* Espacio entre ícono y texto */
+    color: var(--color-primary);
+    /* Ícono en azul oscuro */
+    margin-right: 8px;
+    /* Espacio entre ícono y texto */
 }
-
 
 .card-p {
-    color: var(--color-grey); /* Azul intermedio para texto secundario */
+    color: var(--color-grey);
+    /* Azul intermedio para texto secundario */
 }
 
-.card-footer-text{
-    position: absolute; /* Posiciona sobre la imagen */
-    top: 10px;           /* Distancia desde el borde superior */
-    left: 10px;          /* Distancia desde el borde izquierdo */
-    background-color: rgba(5, 38, 89, 0.85); /* Fondo azul oscuro semitransparente */
-    color: var(--color-white); /* Texto blanco */
-    padding: 6px 12px;   /* Espaciado interno */
-    font-size: 0.9rem;   /* Tamaño pequeño pero legible */
-    font-weight: bold;   /* Negrita para destacar */
-    border-radius: 5px;  /* Bordes redondeados */
-    z-index: 2;          /* Asegura que esté por encima de la imagen */
-    pointer-events: none;/* No interfiere con clics del usuario */
+.card-footer-text {
+    position: absolute;
+    /* Posiciona sobre la imagen */
+    top: 10px;
+    /* Distancia desde el borde superior */
+    left: 10px;
+    /* Distancia desde el borde izquierdo */
+    background-color: rgba(5, 38, 89, 0.85);
+    /* Fondo azul oscuro semitransparente */
+    color: var(--color-white);
+    /* Texto blanco */
+    padding: 6px 12px;
+    /* Espaciado interno */
+    font-size: 0.9rem;
+    /* Tamaño pequeño pero legible */
+    font-weight: bold;
+    /* Negrita para destacar */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    z-index: 2;
+    /* Asegura que esté por encima de la imagen */
+    pointer-events: none;
+    /* No interfiere con clics del usuario */
 }
