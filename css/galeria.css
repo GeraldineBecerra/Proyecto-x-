@@ -1,0 +1,59 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container-galeria {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+  height: 80vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  text-transform: uppercase;
+  width: 90vw;
+}
+
+.card {
+  align-items: center;
+    background: -webkit-radial-gradient(center, ellipse cover, #3d3d3d 10%, #1e1e1e 57%);
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  flex-grow: 0;
+  height: 50%;
+  justify-content: center;
+  outline: 5px solid white;
+  text-shadow: 0 0 5px black;
+  background-repeat: no-repeat;
+
+  &:nth-child(6n - 5) {
+    height: 25%;
+  }
+
+  &:nth-child(6n-4) {
+    height: 75%;
+  }
+
+  &:nth-child(6n-3) {
+    height: 50%;
+  }
+
+  &:nth-child(6n-2) {
+    height: 50%;
+  }
+
+  &:nth-child(6n-1) {
+    height: 66.666%;
+  }
+
+  &:nth-child(6n) {
+    height: 33.333%;
+  }
+}
