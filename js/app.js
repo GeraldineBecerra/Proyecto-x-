@@ -25,18 +25,14 @@ app.use(express.urlencoded({ extended: true }));
 sgMail.setApiKey(mailApi)
 
 
-app.use('/css', express.static(path.join(__dirname, '..', 'css')));
-app.use('/js', express.static(path.join(__dirname, '..', 'js')));
+app.use("/css", express.static(path.join(__dirname, "..", "css")));
+app.use("/js", express.static(path.join(__dirname, "..", "js")));
+app.use(express.static(path.join(__dirname, "..", "public")));
 
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'index.html'));
+app.get("/", (req, res) => {
+  res.redirect("/bienvenida.html");
 });
 
-
-app.get('/contacto', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'contacto.html'));
-});
 
 
 if (!mail || !mailApi) {
