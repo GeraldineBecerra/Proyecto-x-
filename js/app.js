@@ -69,10 +69,13 @@ app.post('/api/contact', async(req, res) => {
     };
 
     const mailOptions = {
-        from: mail,
-        to: emailBody,
-        subject: `Nuevo mensaje de ${nombre}: ${asunto}`,
-        html: `
+      from: {
+        email: mail,
+        name: "Pokemon TCG",
+      },
+      to: emailBody,
+      subject: `Nuevo mensaje de ${nombre}: ${asunto}`,
+      html: `
             <h2>Nuevo mensaje desde tu portafolio</h2>
             <p><strong>Nombre:</strong> ${nombre}</p>
             <p><strong>Email:</strong> ${emailBody}</p>
@@ -80,12 +83,11 @@ app.post('/api/contact', async(req, res) => {
             <p><strong>Asunto:</strong> ${asunto}</p>
             <p><strong>Mensaje:</strong></p>
             <div style="background: #f5f5f5; padding: 15px; margin: 10px 0; border-left: 4px solid #2563eb;">
-                ${mensaje.replace(/\n/g, '<br>')}
+                ${mensaje.replace(/\n/g, "<br>")}
             </div>
             <hr>
             <p><small>Este mensaje fue enviado desde tu formulario de contacto el ${new Date().toLocaleString()}</small></p>
-        `
-
+        `,
     };
 
 
