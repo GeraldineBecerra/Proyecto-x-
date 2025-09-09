@@ -1,0 +1,225 @@
+.contact {
+    padding: 80px 0;
+}
+
+
+/* Layout de contacto - Información y formulario */
+
+
+/* Dividimos en dos columnas: info a la izquierda, formulario a la derecha */
+
+.subtitle {
+    margin: 50px;
+    color: #ffffff;
+}
+
+.contact-content {
+    display: grid;
+    /* CSS Grid para layout */
+    grid-template-columns: 550px;
+    /* Dos columnas iguales */
+    justify-content: center;
+}
+
+
+/* Título de la información de contacto */
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    /* Grande para llamar atención */
+    margin-bottom: 20px;
+    /* Espacio antes del texto */
+    color: #dad604;
+    /* Gris oscuro */
+}
+
+
+/* Descripción del contacto - Invitación a escribir */
+
+.contact-info p {
+    font-size: 1.1rem;
+    /* Ligeramente más grande */
+    line-height: 1.7;
+    /* Espaciado cómodo */
+    color: #ffffff;
+    /* Gris medio */
+    margin-bottom: 30px;
+    /* Espacio antes de los datos */
+}
+
+
+/* Item individual de contacto - Email, teléfono, etc */
+
+.contact-item {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    /* Espacio entre cada item */
+    font-size: 1rem;
+    /* Tamaño normal */
+    color: #ffffff;
+    /* Gris oscuro legible */
+}
+
+
+/* Etiquetas de contacto - Email:, Teléfono:, etc */
+
+.contact-item strong {
+    color: rgba(255, 204, 0, 1);
+}
+
+
+/* Formulario de contacto - Tarjeta destacada */
+
+
+/* El formulario debe destacar como elemento principal */
+
+.contact-form {
+    background: white;
+    /* Fondo blanco para destacar */
+    padding: 40px;
+    /* Relleno generoso */
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Sombra para elevar */
+    border: 2px solid #ffffff;
+}
+
+.contact-form {
+    padding: 25px;
+    /* Menos padding interno */
+}
+
+.map-container {
+    text-align: right;
+    /* Alinea el iframe a la derecha */
+    margin-top: 10px;
+    /* Espacio entre texto y mapa */
+}
+
+.container {
+    max-width: 1200px;
+    /* Ancho máximo para legibilidad */
+    margin: 0 auto;
+    /* Centrado automático */
+    padding: 0 20px;
+    /* Espacios laterales en móviles */
+}
+
+.section-title {
+    text-align: center;
+    /* Centrado para impacto */
+    font-size: 2.5rem;
+    /* Grande pero no abrumador */
+    margin-bottom: 50px;
+    /* Espacio antes del contenido */
+    color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 204, 0, 1);
+    border: 1px solid #ffffff;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.section-title {
+    font-size: 2rem;
+    /* Reducimos de 2.5rem a 2rem */
+}
+
+.form-group {
+    margin-bottom: 25px;
+    /* Espacio entre cada campo */
+}
+
+.form-group label {
+    display: block;
+    /* Ocupa toda la línea */
+    margin-bottom: 8px;
+    /* Espacio antes del input */
+    font-weight: 600;
+    /* Semi-negrita para destacar */
+    color: #333;
+    /* Gris oscuro */
+}
+
+
+/* Campos de entrada - Inputs y textarea */
+
+
+/* Todos los campos deben verse consistentes y cómodos de usar */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    /* Ancho completo */
+    padding: 12px 15px;
+    /* Relleno cómodo */
+    border: 2px solid #e1e5e9;
+    /* Borde gris claro */
+    border-radius: 8px;
+    /* Esquinas redondeadas */
+    font-size: 1rem;
+    /* Tamaño legible */
+    transition: border-color 0.3s ease;
+    /* Transición suave del borde */
+}
+
+
+/* Campos en focus - Cuando el usuario hace clic */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    /* Sin borde por defecto del navegador */
+    border-color: #2563eb;
+    /* Borde azul cuando está activo */
+}
+
+
+/* Sistema de botones - Creamos botones profesionales y usables */
+
+.btn {
+    display: inline-block;
+    /* Se comporta como botón pero puede ser un enlace */
+    padding: 12px 30px;
+    /* Padding calculado para ser fácil de clickear (mínimo 44px de altura) */
+    border-radius: 5px;
+    /* Esquinas ligeramente redondeadas para look moderno sin exagerar */
+    text-decoration: none;
+    /* Sin subrayado porque los botones no deben verse como enlaces */
+    font-weight: 600;
+    /* Semi-negrita para que el texto destaque y sea legible */
+    transition: all 0.3s ease;
+    /* Transición suave para que los cambios se vean profesionales */
+    border: 2px solid transparent;
+    /* Borde transparente que usaremos en los efectos hover */
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    /* Fondo blanco porque destaca perfectamente sobre el degradado */
+    color: rgba(0, 0, 0, 0.8);
+    /* Color azul (nuestro color de marca) para consistencia */
+}
+
+
+/* Botón primario en hover - Efecto elegante de inversión */
+
+.btn-primary:hover {
+    background-color: transparent;
+    /* Se vuelve transparente para mostrar el degradado */
+    color: rgba(255, 204, 0, 1);
+    -webkit-text-stroke: 3px var(black);
+    border-color: #ffffff;
+    /* Aparece borde blanco para mantener la forma del botón */
+}
+
+
+/* Botón ancho completo - Para formularios */
+
+.btn-full {
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    padding: 15px;
+    /* Más relleno para formularios */
+    font-size: 1.1rem;
+    /* Ligeramente más grande */
+}
