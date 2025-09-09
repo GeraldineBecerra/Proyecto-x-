@@ -1,79 +1,57 @@
-
-/* tu CSS de galería aquí */
-
-/* ====== GALERÍA (Luis) ====== */
-#galeria{
-  padding: 28px 16px;
+/* ====== Galería ====== */
+.galeria-title {
   text-align: center;
+  color: #facc15;
+  margin: 16px 0 12px;
+  font-size: clamp(20px, 2.5vw, 26px);
+  letter-spacing: .5px;
 }
 
-#galeria .galeria-title{
-  color:#FFD700;
-  font-size: 1.8rem;
-  margin: 0 0 16px;
-}
-
-/* contenedor ancho del sitio (evita que se estreche al centro) */
-#galeria .galeria-container{
-  width: 100%;
-  max-width: 1200px;
+#galeria .galeria-container {
+  max-width: 1000px;     /* un poco más compacto */
   margin: 0 auto;
+  padding: 0 12px;
 }
 
-/* === GRID lado a lado === */
-#galeria .parent{
-  display: grid !important;                             /* forzar grid */
-  grid-template-columns: repeat(3, minmax(260px, 1fr)); /* 3 columnas desktop */
-  gap: 20px;
+#galeria .parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* más pequeñas */
+  gap: 14px; /* más juntas */
   justify-items: center;
   align-items: stretch;
-  width: 100%;
 }
 
-/* tarjeta con proporción de carta */
-#galeria .parent > div{
+#galeria .parent > div {
   width: 100%;
-  aspect-ratio: 3 / 4;          /* proporción de carta */
-  border-radius: 12px;
+  aspect-ratio: 3 / 4;   /* mantiene forma de carta */
   overflow: hidden;
-  box-shadow: 0 12px 24px rgba(0,0,0,.35);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.3);
+  background: #0b0b0b;
 }
 
-/* imagen llenando la tarjeta (sin espacios ni fondo) */
-#galeria .parent img{
+#galeria .parent img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   display: block;
-  object-fit: cover;            /* elimina espacios sobrantes */
-  object-position: center;
-  border-radius: 12px;
-  transition: transform .25s ease, filter .25s ease;
+  transition: transform .25s ease;
 }
 
-/* hover suave */
-#galeria .parent img:hover{
-  transform: scale(1.05);
-  filter: brightness(1.06);
+#galeria .parent > div:hover img {
+  transform: scale(1.03);
 }
 
-/* ===== Responsivo ===== */
-@media (max-width: 992px){
-  #galeria .parent{
-    grid-template-columns: repeat(2, minmax(240px, 1fr)); /* 2 columnas tablet */
+/* Responsivo */
+@media (max-width: 992px) {
+  #galeria .parent {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
   }
 }
-@media (max-width: 640px){
-  #galeria .parent{
-    grid-template-columns: 1fr;                           /* 1 columna móvil */
+@media (max-width: 640px) {
+  #galeria .parent {
+    grid-template-columns: repeat(2, 1fr); /* álbum de 2 columnas en móvil */
+    gap: 10px;
   }
-}
-
-/* ===== Cortes de estilos globales que podrían interferir ===== */
-/* Si el sitio tiene reglas globales que pisaban tu grid, las anulamos aquí */
-#galeria .parent,
-#galeria .parent > div,
-#galeria .parent img{
-  float: none !important;
-  position: static !important;
-  max-width: none !important;
 }
